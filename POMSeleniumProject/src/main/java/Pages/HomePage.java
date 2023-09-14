@@ -32,6 +32,9 @@ public class HomePage {
 		button.Click(ElementLocators.HomePage.addToCartButton);
 	}
 	
+	public void ClickMenuButton() {
+		button.Click(ElementLocators.HomePage.menuButton);
+	}
 	
 	public boolean IsRemoveButtonDisplayed() {
 		return webElementActions.IsDisplayed(ElementLocators.HomePage.removeButon);
@@ -39,8 +42,8 @@ public class HomePage {
 	}
 	
 	
-	public String GetHomePageTitle() {
-		return webElementActions.GetText(ElementLocators.HomePage.homePageTitleLoc);
+	public boolean IstHomePageTitleDisplayed(String title) {
+		return webElementActions.GetText(ElementLocators.HomePage.homePageTitleLoc).equals(title);
 	}
 	
 	public void SortProductsOrderUsingText(String sortOrder) {
